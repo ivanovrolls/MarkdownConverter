@@ -1,6 +1,11 @@
 from jinja2 import Environment, FileSystemLoader
-from resume_data import data as resume
+from resume_data import cv_data
 from playwright.sync_api import sync_playwright
+
+with open("CV.md", "r") as file:
+    md_text = file.read()
+
+resume = cv_data(md_text)  # Parse the markdown text into structured data
 
 env = Environment(loader=FileSystemLoader("templates")) #point jinja to the templates directory
 template = env.get_template("resume_template.html") #load template file

@@ -83,12 +83,17 @@
       {% endfor %}
     </div>
 
-    <div class="section">
-      <h2>Education</h2>
-      {% for edu in education %}
-        <p><strong>{{ edu.degree }} <br></strong> {{ edu.school }}, {{ edu.location }}<span class="job-duration">{{ edu.start_date }} – {{ edu.end_date }}</span></p>
-      {% endfor %}
-    </div>
+<div class="section">
+  <h2>Education</h2>
+  {% for edu in education %}
+    <p>
+      <strong>{{ edu.degree }} <br></strong> 
+      {{ edu.school }}{% if edu.school and edu.location %}, {% endif %}{{ edu.location }}
+      <span class="job-duration">{{ edu.start_date }} – {{ edu.end_date }}</span>
+    </p>
+  {% endfor %}
+</div>
+
   </div>
 </body>
 </html>
