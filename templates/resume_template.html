@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ name }} – Resume</title>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      margin: 2rem;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.2em;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .section {
+      margin-bottom: 1.5rem;
+    }
+    .job-title {
+      font-weight: bold;
+    }
+    .job-duration {
+      float: right;
+      font-style: italic;
+      color: #666;
+    }
+    .contact {
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      margin: 0.2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{ name }}</h1>
+    <div class="contact">
+      <p>Email: {{ email }}</p>
+      <p>Phone: {{ phone }}</p>
+      <p>Website: {{ website }}</p>
+    </div>
+
+    <div class="section">
+      <h2>Summary</h2>
+      <p>{{ summary }}</p>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      {% for job in experience %}
+        <p class="job-title">{{ job.title }} – {{ job.company }} <span class="job-duration">{{ job.dates }}</span></p>
+        <ul>
+          {% for point in job.description %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      {% for edu in education %}
+        <p><strong>{{ edu.degree }}</strong>, {{ edu.school }} ({{ edu.dates }})</p>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
