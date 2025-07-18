@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ name }} – Resume</title>
+  <title>Ivan Germanoff – Resume</title>
   <style>
     body {
       font-family: 'Helvetica', sans-serif;
@@ -50,44 +50,57 @@
 </head>
 <body>
   <div class="container">
-    <h1>{{ name }}</h1>
+    <h1>Ivan Germanoff</h1>
     <div class="contact">
-      <p>Email: {{ email }}</p>
-      <p>Phone: {{ phone }}</p>
-      <p>Website: {{ website }}</p>
+      <p>Email: ivan@example.com</p>
+      <p>Phone: +1234567890</p>
+      <p>Website: https://ivan.example.com</p>
     </div>
 
     <div class="section">
       <h2>Summary</h2>
-      <p>{{ summary }}</p>
+      <p>Experienced software developer with a focus on web applications and machine learning.</p>
     </div>
 
     <div class="section">
       <h2>Skills</h2>
       <ul>
-        {% for skill in skills %}
-        <li>{{ skill }}</li>
-        {% endfor %}
+        
+        <li>Python</li>
+        
+        <li>Django</li>
+        
       </ul>
     </div>
 
     <div class="section">
       <h2>Work Experience</h2>
-      {% for job in jobs %}
-        <p class="job-title">{{ job.title }} – {{ job.company }} <span class="job-duration">{{ job.start_date }} – {{ job.end_date }}</span>
+      
+        <p class="job-title">Software Engineer – Tech Solutions <span class="job-duration">2020-01-01 – 2022-12-31</span>
         <ul>
-          {% for point in job.description %}
-          <li>{{ point }}</li>
-          {% endfor %}
+          
+          <li>Developed web applications using Python and Django.</li>
+          
+          <li>Led a team of developers to deliver high-quality software.</li>
+          
         </ul>
-      {% endfor %}
+      
+        <p class="job-title">Data Scientist – Data Insights <span class="job-duration">2018-01-01 – 2019-12-31</span>
+        <ul>
+          
+          <li>Analyzed data and built machine learning models.</li>
+          
+          <li>Collaborated with cross-functional teams to deliver insights.</li>
+          
+        </ul>
+      
     </div>
 
     <div class="section">
       <h2>Education</h2>
-      {% for edu in education %}
-        <p><strong>{{ edu.degree }}</strong>, {{ edu.school }} ({{ edu.dates }})</p>
-      {% endfor %}
+      
+        <p><strong></strong>,  ()</p>
+      
     </div>
   </div>
 </body>
