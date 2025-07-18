@@ -22,7 +22,21 @@ data = {
             "description": ["Analyzed data and built machine learning models.", "Collaborated with cross-functional teams to deliver insights."]
         }
     ],
-    "skills": ["Python", "Django"],
-    "education": [ ... ],
-    "experience": [ ... ]
+    "skills": ["Python", "Django", "Machine Learning", "Computer Vision"],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science and Philosophy",
+            "school": "University of Glasgow",
+            "location": "Glasgow, UK",
+            "start_date": 2020,
+            "end_date": 2025,
+        },
+        {
+            "degree": "A-Levels in Spanish (A*),  CompSci(B), Maths (B), EPQ (B)",
+            "school": "Peter Symonds College",
+            "location": "Winchester, UK",
+            "start_date": 2018,
+            "end_date": 2020,
+        }
+    ]
 }
